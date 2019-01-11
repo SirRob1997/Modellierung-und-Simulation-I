@@ -1,0 +1,2 @@
+#counter ; numSamples ; MEAN; VAR; STD; CVAR; MIN; MAX; COV; CORR
+batch means autocorrelation (lag=0);0;0.0;0.0;0.0;0.0;Infinity;-Infinity;NaN;1.0

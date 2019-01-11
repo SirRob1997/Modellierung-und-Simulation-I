@@ -1,0 +1,204 @@
+\subsection*{Serie 02}
+\subsubsection*{Problem 2.2.1}
+The discrete event simulation (DES) has various components, which work together to successfully simulate discrete events. These components include the simulation clock, events, statistic counters and the main program. 
+
+The simulation clock shows the current system time. Here the real time needs to be converted to the corresponding simulation time. Events are associated with a discrete simulation time, at which the event runs his corresponding event routine. An event routine leads to an action in the system which can influence for example the system state. All events are managed in an event chain (event queue). Statistic counters contain information about the system, which can be for example packet sizes or queue lengths. 
+
+The first step in the main program is to initialize the system state, containing variables, lists and queues. After everything is initialized the event chain gets executed. During this process the next event in the event chain gets selected, the simulation time gets forwarded to the event time and finally the event routine gets executed. While the event chain is being executed, the size of the chain is always greater than $1$ because of the terminating stop event. Once the termination event is reached, the simulation process terminates. 
+\newpage
+\subsubsection*{Problem 2.2.4}
+Results of simulation $1$ with an interarrival time of customers $10s$, service time $9s$ and simulation time $10000s$:
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\multirow{2}{*}{} & \multicolumn{2}{l|}{Simulation 1} \\ \cline{2-3} 
+                  & $mean$        & $c_{var}$      \\ \hline
+occupancy time    & 0.0           & 0.0             \\ \hline
+service time      & 9.0           & 0.0             \\ \hline
+utilization time  & 0.9           & 0.33333333333333326              \\ \hline
+waiting time & 0.0         & 0.0             \\ \hline
+\end{tabular}
+\end{table}\\
+Results of simulation $2$ with an interarrival time of customers $10s$, service time $10s$ and simulation time $10000s$:
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\multirow{2}{*}{} & \multicolumn{2}{l|}{Simulation 2} \\ \cline{2-3} 
+                  & $mean$        & $c_{var}$      \\ \hline
+occupancy time      & 0.0           & 0.0            \\ \hline
+service time      & 10.0           & 0.0            \\ \hline
+utilization time  & 1.0           & 0.0             \\ \hline
+waiting time & 0.0         & 0.0             \\ \hline
+\end{tabular}
+\end{table}\\
+Results of simulation $3$ with an interarrival time of customers $10s$, service time $11s$ and simulation time $10000s$:
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\multirow{2}{*}{} & \multicolumn{2}{l|}{Simulation 3} \\ \cline{2-3} 
+                  & $mean$        & $c_{var}$      \\ \hline
+occupancy time      & 44.865           & 0.5849120747543387            \\ \hline
+service time      & 11.0           & 0.0            \\ \hline
+utilization time  & 1.0           & 0.0             \\ \hline
+waiting time & 454.0         & 0.5783039542709295             \\ \hline
+\end{tabular}
+\end{table}\\
+\newpage
+\noindent Results of simulation $4$ with an interarrival time of customers $10s$, service time $9s$ and simulation time $100000s$:
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\multirow{2}{*}{} & \multicolumn{2}{l|}{Simulation 4} \\ \cline{2-3} 
+                  & $mean$        & $c_{var}$      \\ \hline
+occupancy time      & 0.0           & 0.0            \\ \hline
+service time      & 9.0           & 0.0            \\ \hline
+utilization time  & 0.9           & 0.33333333333333326             \\ \hline
+waiting time & 0.0         & 0.0             \\ \hline
+\end{tabular}
+\end{table}\\
+Results of simulation $5$ with an interarrival time of customers $10s$, service time $10s$ and simulation time $100000s$:
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\multirow{2}{*}{} & \multicolumn{2}{l|}{Simulation 5} \\ \cline{2-3} 
+                  & $mean$        & $c_{var}$      \\ \hline
+occupancy time      & 0.0           & 0.0            \\ \hline
+service time      & 10.0           & 0.0            \\ \hline
+utilization time  & 1.0           & 0.0             \\ \hline
+waiting time & 0.0         & 0.0             \\ \hline
+\end{tabular}
+\end{table}\\
+Results of simulation $6$ with an interarrival time of customers $10s$, service time $11s$ and simulation time $100000s$:
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\multirow{2}{*}{} & \multicolumn{2}{l|}{Simulation 6} \\ \cline{2-3} 
+                  & $mean$        & $c_{var}$      \\ \hline
+occupancy time      & 453.9546           & 0.5781011743810226            \\ \hline
+service time      & 11.0           & 0.0            \\ \hline
+utilization time  & 1.0           & 0.0             \\ \hline
+waiting time & 4544.5         & 0.5774455511199658             \\ \hline
+\end{tabular}
+\end{table}
+\newpage
+\subsubsection*{Problem 2.2.5}
+Histogram for waiting and service time per customer for simulation $1$:\\
+\begin{figure}[H]
+	\centering
+  \includegraphics[width=0.7\textwidth]{serie_02/data/Simulation1/waiting_time.pdf}
+	\caption{Simulation 1 - Waiting Time}
+	\label{fig3}
+\end{figure}
+\begin{figure}[H]
+	\centering
+  \includegraphics[width=0.7\textwidth]{serie_02/data/Simulation1/service_time.pdf}
+	\caption{Simulation 1 - Service Time}
+	\label{fig3}
+\end{figure}
+\newpage
+Histogram for waiting and service time per customer for simulation $2$:\\
+\begin{figure}[H]
+	\centering
+  \includegraphics[width=0.7\textwidth]{serie_02/data/Simulation2/waiting_time.pdf}
+	\caption{Simulation 2 - Waiting Time}
+	\label{fig3}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+  \includegraphics[width=0.7\textwidth]{serie_02/data/Simulation2/service_time.pdf}
+	\caption{Simulation 2 - Service Time}
+	\label{fig3}
+\end{figure}
+\newpage
+Histogram for waiting and service time per customer for simulation $3$:\\
+
+\begin{figure}[H]
+	\centering
+  \includegraphics[width=0.7\textwidth]{serie_02/data/Simulation3/waiting_time.pdf}
+	\caption{Simulation 3 - Waiting Time}
+	\label{fig3}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+  \includegraphics[width=0.7\textwidth]{serie_02/data/Simulation3/service_time.pdf}
+	\caption{Simulation 3 - Service Time}
+	\label{fig3}
+\end{figure}
+\newpage
+Histogram for waiting and service time per customer for simulation $4$:\\
+
+\begin{figure}[H]
+	\centering
+  \includegraphics[width=0.7\textwidth]{serie_02/data/Simulation4/waiting_time.pdf}
+	\caption{Simulation 4 - Waiting Time}
+	\label{fig3}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+  \includegraphics[width=0.7\textwidth]{serie_02/data/Simulation4/service_time.pdf}
+	\caption{Simulation 4 - Service Time}
+	\label{fig3}
+\end{figure}
+\newpage
+Histogram for waiting and service time per customer for simulation $5$:\\
+
+\begin{figure}[H]
+	\centering
+  \includegraphics[width=0.7\textwidth]{serie_02/data/Simulation5/waiting_time.pdf}
+	\caption{Simulation 5 - Waiting Time}
+	\label{fig3}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+  \includegraphics[width=0.7\textwidth]{serie_02/data/Simulation5/service_time.pdf}
+	\caption{Simulation 5 - Service Time}
+	\label{fig3}
+\end{figure}
+\newpage
+Histogram for waiting and service time per customer for simulation $6$:\\
+
+\begin{figure}[H]
+	\centering
+  \includegraphics[width=0.7\textwidth]{serie_02/data/Simulation6/waiting_time.pdf}
+	\caption{Simulation 6 - Waiting Time}
+	\label{fig3}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+  \includegraphics[width=0.7\textwidth]{serie_02/data/Simulation6/service_time.pdf}
+	\caption{Simulation 6 - Service Time}
+	\label{fig3}
+\end{figure}
+
+\subsubsection*{Problem 2.2.6}
+Discrete counter instead of continous counter for queue occupancy and server utilization:\\
+Comparison of mean values and the coefficient of the variation with above: 
+
+
+
+
+\subsubsection*{Problem 2.3.1}
+\textit{please see code}
+\subsubsection*{Problem 2.3.2}
+\textit{please see code}
+\subsubsection*{Problem 2.3.3}
+
+The Exponential distributions with $mean=1$, $c_{var} = 0.1$ and $mean=1$, $c_{var}=2$ cannot be instantiated. This is because the relation $c_{var}=\frac{\sigma}{mean}=\frac{\sqrt{\frac{1}{\lambda^2}}}{\frac{1}{\lambda}}= 1$ is not fulfilled.\\
+The ErlangK distribution with $mean=1$,$c_{var}=2$ cannot be instantiated. This is because the relation
+$c_{var} = \frac{\sigma}{mean} = \frac{\frac{\sqrt{k}}{\lambda}}{\frac{k}{\lambda}} = \frac{1}{\sqrt{k}}$ is not true for any integer k.\\
+The HyperExponential distribution H2 with $mean=1$, $c_{var} = 0.1$ cannot be instantiated. This is because $c_{var}^2 - 1$ has to be greater or equal $0$.\\
+The HyperExponential distribution H2 with $mean=1$, $c_{var}=1$ can be instantiated, but because the two resulting lambda's are the same, the two probabilities p are the same too. It follows, that this is a degenerated hyperexponential distribution and behaves just like a "normal" exponential distribution.
+
+The following pages contain the console output for a specific run of the RandVarTest.java file.\\
+\lstinputlisting[language={}]{./serie_02/var_test_console.txt}

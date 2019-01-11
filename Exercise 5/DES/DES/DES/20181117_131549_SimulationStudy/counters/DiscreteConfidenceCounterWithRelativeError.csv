@@ -1,0 +1,4 @@
+#counter ; numSamples ; MEAN; VAR; STD; CVAR; MIN; MAX;alpha;tz(1-alpha/2);lowerBound;upperBound;maxRelErr;maxAbsErr
+batch means waiting time;0;0.0;0.0;0.0;0.0;Infinity;-Infinity;0.1;0.0;NaN;;NaN;Infinity;NaN
+batch means waiting times;1386;21.208649639249625;512.6372671987918;22.641494367616104;1.0675594511078534;0.0085;107.89579999999998;0.1;1.659980708070807;20.199102698587055;;22.218196579912195;0.049979791465350004;1.0095469406625694
+batch means service time;0;0.0;0.0;0.0;0.0;Infinity;-Infinity;0.1;0.0;NaN;;NaN;Infinity;NaN

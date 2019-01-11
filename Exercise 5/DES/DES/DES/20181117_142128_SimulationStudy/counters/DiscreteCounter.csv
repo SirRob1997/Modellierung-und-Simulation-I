@@ -1,0 +1,5 @@
+#counter ; numSamples ; MEAN; VAR; STD; CVAR; MIN; MAX
+waiting time/customer;8040;14.787713432835847;147.3233923029908;12.137684799952206;0.8207952402567322;0.0;57.125
+service time/customer;8040;0.9997548507462699;1.0066924104752843;1.0033406253487818;1.003586653868031;0.001;9.836
+temporary service time task 4;0;0.0;0.0;0.0;0.0;Infinity;-Infinity
+temporary waiting time task 4;0;0.0;0.0;0.0;0.0;Infinity;-Infinity

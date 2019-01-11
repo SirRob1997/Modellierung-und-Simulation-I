@@ -1,0 +1,5 @@
+#counter ; numSamples ; MEAN; VAR; STD; CVAR; MIN; MAX
+waiting time/customer;12830;9.434234138737352;96.51878202187527;9.824397285425466;1.0413561017195967;0.0;62.291
+service time/customer;12830;0.9402544816835503;0.884635236114854;0.9405504963131187;1.0003148239496167;0.001;8.416
+temporary batch means service time;0;0.0;0.0;0.0;0.0;Infinity;-Infinity
+temporary batch means waiting time;0;0.0;0.0;0.0;0.0;Infinity;-Infinity

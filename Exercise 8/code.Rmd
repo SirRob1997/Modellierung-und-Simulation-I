@@ -1,0 +1,108 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+Problem 8.1.4
+---------------------------
+
+Initializing the parameters
+```{r}
+rho <- c(0.3,0.7,0.9)
+n <- 2
+states <- matrix(0:4, 5, 3)
+```
+
+Function for calculating state Probabilities: 9.5.1 course script
+```{r}
+calcStateProbabilities <- function(i, a, n) {
+sum <- 0.0
+for (k in 0:n) {
+  sum <- sum + ((a ^ k) / factorial(k))
+}
+x_i <- ((a ^ i) / factorial(i)) / sum
+return(x_i)
+}
+```
+
+
+Calculating the respective values
+```{r}
+x0_a1 = calcStateProbabilities(i = 0, a = (rho[1] * n), n)
+x1_a1 = calcStateProbabilities(i = 1, a = (rho[1] * n), n)
+x2_a1 = calcStateProbabilities(i = 2, a = (rho[1] * n), n)
+x3_a1 = calcStateProbabilities(i = 3, a = (rho[1] * n), n)
+x4_a1 = calcStateProbabilities(i = 4, a = (rho[1] * n), n)
+x0_a2 = calcStateProbabilities(i = 0, a = (rho[2] * n), n)
+x1_a2 = calcStateProbabilities(i = 1, a = (rho[2] * n), n)
+x2_a2 = calcStateProbabilities(i = 2, a = (rho[2] * n), n)
+x3_a2 = calcStateProbabilities(i = 3, a = (rho[2] * n), n)
+x4_a2 = calcStateProbabilities(i = 4, a = (rho[2] * n), n)
+x0_a3 = calcStateProbabilities(i = 0, a = (rho[3] * n), n)
+x1_a3 = calcStateProbabilities(i = 1, a = (rho[3] * n), n)
+x2_a3 = calcStateProbabilities(i = 2, a = (rho[3] * n), n)
+x3_a3 = calcStateProbabilities(i = 3, a = (rho[3] * n), n)
+x4_a3 = calcStateProbabilities(i = 4, a = (rho[3] * n), n)
+```
+
+Storing the data
+```{r}
+data <- c(
+x0_a1,
+x0_a2,
+x0_a3,
+x1_a1,
+x1_a2,
+x1_a3,
+x2_a1,
+x2_a2,
+x2_a3,
+x3_a1,
+x3_a2,
+x3_a3,
+x4_a1,
+x4_a2,
+x4_a3
+)
+```
+
+```{r}
+state_probabilities <- matrix(
+data = data,
+nrow = 5,
+ncol = 3,
+byrow = TRUE
+)
+```
+
+```{r}
+plot(states, state_probabilities)
+lines(approx(states[, 1], state_probabilities[, 1]), col = "blue")
+lines(approx(states[, 2], state_probabilities[, 2]), col = "red")
+lines(approx(states[, 3], state_probabilities[, 3]), col = "black")
+```
+
+Problem 8.1.6
+---------------------------
+
+```{r}
+for (j in seq_along(rho)) {
+message("Current rho = ", rho[j])
+message("The respective blocking probability for new customers is = ",
+sum(probabilities[3:5, j]))
+}
+```
+
+
+Problem 8.1.7
+---------------------------
+Plotting
+```{r}
+blocking = c(sum(probabilities[3:5, 1]),
+sum(probabilities[3:5, 2]),
+sum(probabilities[3:5, 3]))
+plot(rho, blocking, ylab = "blocking probability", log = "y")
+lines(approx(rho, blocking))
+```
+

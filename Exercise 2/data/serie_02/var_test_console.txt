@@ -1,0 +1,152 @@
+
+analytical properties: Uniform
+	mean: 1.0
+	cvar: 0.09999999999999996
+	standard deviation: 0.09999999999999996
+	variance: 0.009999999999999993
+
+hyperparameters:
+	low: 0.8267949192431123
+	high: 1.1732050807568877
+
+observed random variable: u(1/0.1)
+	counter type: discrete-time counter
+	number of samples: 1000000
+	mean: 0.9999339261755062
+	variance: 0.009988439713883829
+	standard deviation: 0.09994218185472953
+	coefficient of variation: 0.09994878585326436
+	minimum: 0.8267955791053156
+	maximum: 1.1732049888411293
+
+analytical properties: Uniform
+	mean: 1.0
+	cvar: 0.9999999999999999
+	standard deviation: 0.9999999999999999
+	variance: 0.9999999999999999
+
+hyperparameters:
+	low: -0.7320508075688772
+	high: 2.732050807568877
+
+observed random variable: u(1/1)
+	counter type: discrete-time counter
+	number of samples: 1000000
+	mean: 1.0009451761584902
+	variance: 0.999562640641644
+	standard deviation: 0.9997812964051909
+	coefficient of variation: 0.9988372192793153
+	minimum: -0.7320505527403145
+	maximum: 2.7320475527485084
+
+analytical properties: Uniform
+	mean: 1.0
+	cvar: 1.9999999999999998
+	standard deviation: 1.9999999999999998
+	variance: 3.9999999999999996
+
+hyperparameters:
+	low: -2.4641016151377544
+	high: 4.464101615137754
+
+observed random variable: u(1/2)
+	counter type: discrete-time counter
+	number of samples: 1000000
+	mean: 0.9985852814415288
+	variance: 3.9979063626309275
+	standard deviation: 1.9994765221504671
+	coefficient of variation: 2.0023092261725317
+	minimum: -2.4641008274808156
+	maximum: 4.464098555505992
+
+java.lang.IllegalArgumentException: no exponential distribution can fulfill this
+
+analytical properties: Exponential
+	mean: 1.0
+	cvar: 1.0
+	standard deviation: 1.0
+	variance: 1.0
+
+hyperparameters:
+	lambda: 1.0
+
+observed random variable: e(1/1)
+	counter type: discrete-time counter
+	number of samples: 1000000
+	mean: 0.9999244242179334
+	variance: 1.0005224835713675
+	standard deviation: 1.00026120767096
+	coefficient of variation: 1.0003368089076232
+	minimum: 5.087969042600845E-7
+	maximum: 14.901709321775272
+
+java.lang.IllegalArgumentException: no exponential distribution can fulfill this
+
+analytical properties: ErlangK
+	mean: 1.0000000000000002
+	cvar: 0.09999999999999999
+	standard deviation: 0.10000000000000002
+	variance: 0.010000000000000004
+
+hyperparameters:
+	k: 100
+	lambda: 99.99999999999999
+
+observed random variable: k(1/0.1)
+	counter type: discrete-time counter
+	number of samples: 1000000
+	mean: 1.0000091665363684
+	variance: 0.00999800732006829
+	standard deviation: 0.09999003610394533
+	coefficient of variation: 0.09998911955004453
+	minimum: 0.5619249658793721
+	maximum: 1.5924694607913528
+
+analytical properties: ErlangK
+	mean: 1.0
+	cvar: 1.0
+	standard deviation: 1.0
+	variance: 1.0
+
+hyperparameters:
+	k: 1
+	lambda: 1.0
+
+observed random variable: k(1/1)
+	counter type: discrete-time counter
+	number of samples: 1000000
+	mean: 1.0001891637870386
+	variance: 0.9985986936338268
+	standard deviation: 0.9992991011873406
+	coefficient of variation: 0.999110105736071
+	minimum: 6.5180126533125E-7
+	maximum: 15.033974577307747
+
+java.lang.IllegalArgumentException: no erlang distribution can fulfill this
+
+java.lang.IllegalArgumentException: no hyperexponential distribution can fulfill this
+
+java.lang.IllegalArgumentException: lambda1 == lambda2 -> degenerated hyperexponential distribution
+
+analytical properties: HyperExponential
+	mean: 1.0
+	cvar: 2.0
+	standard deviation: 2.0
+	variance: 4.0
+
+hyperparameters:
+	p1: 0.1127016653792583
+	lambda1: 0.2254033307585166
+	p2: 0.8872983346207417
+	lambda2: 1.7745966692414834
+
+observed random variable: h(1/2)
+	counter type: discrete-time counter
+	number of samples: 1000000
+	mean: 2.0961089668213866
+	variance: 20.964138207185904
+	standard deviation: 4.578661180649416
+	coefficient of variation: 2.184362193532648
+	minimum: 4.161550920427093E-7
+	maximum: 73.34553838167366
+
